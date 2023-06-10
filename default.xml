@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="mi-thorium"
+           fetch="https://github.com/Mi-Thorium" />
+
+  <default revision="refs/heads/master"
+           remote="mi-thorium"
+           sync-c="true"
+           sync-j="4" />
+
+  <project path="kernel" name="kernel_msm-4.9" groups="kernel" revision="mithorium/a13/master" >
+    <linkfile src="drivers" dest="drivers" />
+  </project>
+
+  <project path="dts/xiaomi-msm8937" name="kernel_devicetree_xiaomi-msm8937" groups="dts" revision="dts/mi8937/4.9/master" >
+    <linkfile src="." dest="kernel/arch/arm64/boot/dts/xiaomi-msm8937" />
+  </project>
+  <project path="dts/xiaomi-sdm439" name="kernel_devicetree_xiaomi-sdm439" groups="dts" revision="dts/mi439/4.9/master" >
+    <linkfile src="." dest="kernel/arch/arm64/boot/dts/xiaomi-sdm439" />
+  </project>
+
+  <project path="module/xiaomi-msm8937" name="kernel_techpack_xiaomi-msm8937" groups="module" revision="techpack/mi8937/4.9/master" >
+    <linkfile src="." dest="kernel/techpack/xiaomi-msm8937" />
+  </project>
+  <project path="module/xiaomi-sdm439" name="kernel_techpack_xiaomi-sdm439" groups="module" revision="techpack/mi439/4.9/master" >
+    <linkfile src="." dest="kernel/techpack/xiaomi-sdm439" />
+  </project>
+
+  <project path="module/audio-legacy" name="kernel_techpack_audio-legacy" groups="module" revision="audio/4.9/mithorium/master" >
+    <linkfile src="." dest="kernel/techpack/audio-legacy" />
+  </project>
+  <project path="module/camera-legacy" name="kernel_techpack_camera-legacy" groups="module" revision="camera/LA.UM.8.6.r1-05300-89xx.0/4.9/mithorium" >
+    <linkfile src="." dest="kernel/techpack/camera-legacy" />
+  </project>
+  <project path="module/camera-legacy-m" name="kernel_techpack_camera-legacy" groups="module" revision="camera/LA.UM.5.3-10610-89xx.0/4.9/mithorium" >
+    <linkfile src="." dest="kernel/techpack/camera-legacy-m" />
+  </project>
+
+  <project path="module/prima" name="vendor_qcom_opensource_wlan_prima" groups="module" revision="wlan/LA.UM.9.6.4/mithorium/master" >
+    <linkfile src="." dest="kernel/drivers/staging/prima" />
+  </project>
+
+</manifest>
