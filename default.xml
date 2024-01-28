@@ -8,7 +8,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="kernel" name="kernel_msm-4.9" groups="kernel" revision="mithorium/a13/master" >
+  <project path="kernel" name="kernel_msm-4.9" groups="kernel" revision="mithorium/a14/master" >
     <linkfile src="drivers" dest="drivers" />
   </project>
 
